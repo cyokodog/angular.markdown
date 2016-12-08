@@ -42,7 +42,7 @@
     return {
       fetch: function(url){
         var d = $q.defer();
-        $http.get(url).
+        $http.get(url, {cache:false}).
         success(function(res){
           d.resolve(res);
         });
